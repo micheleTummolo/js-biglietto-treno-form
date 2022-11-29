@@ -67,7 +67,7 @@ button.addEventListener ('click', function(){
     /* Contorllo form */
     if (km_value == 0){
         alert ("Inserisci i km da percorrere");
-        prezzo_arrotondato = "##.##";
+        document.getElementById ('price').innerHTML = "##.##";
         document.getElementById ('carriage_numb').innerHTML = "#";
         document.getElementById ('cp_numb').innerHTML = "#####";
         
