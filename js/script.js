@@ -63,8 +63,16 @@ button.addEventListener ('click', function(){
     prezzo_arrotondato = prezzo_finito.toFixed(2);
     console.log (prezzo_arrotondato + " Prezzo arrotondato")
 
+    function getRandomInt(max) {
+        return Math.floor (Math.random() * max);
+    }
+
+
     document.getElementById ('passenger_name').innerHTML = name_value;
+    document.getElementById ('carriage_numb').innerHTML = getRandomInt (10) + 1;
+    document.getElementById ('cp_numb').innerHTML = getRandomInt (89999) + 10000;
     document.getElementById ('price').innerHTML = prezzo_arrotondato;
+
 });
 
 reset.addEventListener ('click', function(){
