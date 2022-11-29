@@ -14,12 +14,28 @@ const reset = document.getElementById ('reset')
 button.addEventListener ('click', function(){
     
     /* Input value */
+
+    /* Name */
     name_value = document.getElementById('name').value;
     console.log (name_value);
 
+    if (name_value == 0){
+        alert ("Inserisci il nome del passeggero")
+        name_value = document.getElementById('name').value;
+        console.log (name_value);
+    }
+
+    /* Km */
     km_value = document.getElementById('km').value;
     console.log (km_value);
 
+    if (km_value == 0){
+        alert ("Inserisci i km da percorrere")
+        km_value = document.getElementById('km').value;
+        console.log (km_value);
+    }
+
+    /* Age */
     age_value = document.getElementById('age').value;
     console.log (age_value);
 
