@@ -19,21 +19,16 @@ button.addEventListener ('click', function(){
     name_value = document.getElementById('name').value;
     console.log (name_value);
 
+    /* Controllo form name */
     if (name_value == 0){
-        alert ("Inserisci il nome del passeggero")
-        name_value = document.getElementById('name').value;
-        console.log (name_value);
+        alert ("Inserisci il nome del passeggero");
+        name_value = "###### #######";
     }
 
     /* Km */
     km_value = document.getElementById('km').value;
     console.log (km_value);
 
-    if (km_value == 0){
-        alert ("Inserisci i km da percorrere")
-        km_value = document.getElementById('km').value;
-        console.log (km_value);
-    }
 
     /* Age */
     age_value = document.getElementById('age').value;
@@ -67,17 +62,28 @@ button.addEventListener ('click', function(){
         return Math.floor (Math.random() * max);
     }
 
-
     document.getElementById ('passenger_name').innerHTML = name_value;
-    document.getElementById ('carriage_numb').innerHTML = getRandomInt (10) + 1;
-    document.getElementById ('cp_numb').innerHTML = getRandomInt (89999) + 10000;
-    document.getElementById ('price').innerHTML = prezzo_arrotondato;
+    
+    /* Contorllo form */
+    if (km_value == 0){
+        alert ("Inserisci i km da percorrere");
+        prezzo_arrotondato = "##.##";
+        document.getElementById ('carriage_numb').innerHTML = "#";
+        document.getElementById ('cp_numb').innerHTML = "#####";
+        
+    }
+    else {
+        document.getElementById ('carriage_numb').innerHTML = getRandomInt (10) + 1;
+        document.getElementById ('cp_numb').innerHTML = getRandomInt (89999) + 10000;
+        document.getElementById ('price').innerHTML = prezzo_arrotondato;
+    }
+
 
 });
 
 reset.addEventListener ('click', function(){
     document.getElementById("form_name").reset();
     document.getElementById("form_km").reset();
-    document.getElementById("form_age").reset();
+    document.getElementById("form_age").reset(); 
 })
 
