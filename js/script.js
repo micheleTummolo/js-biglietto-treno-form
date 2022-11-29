@@ -52,6 +52,8 @@ button.addEventListener ('click', function(){
 });
 
 reset.addEventListener ('click', function(){
-    document.getElementsByClassName("my_form").reset();
+    document.getElementById("form_name").reset();
+    document.getElementById("form_km").reset();
+    document.getElementById("form_age").reset();
 })
 
