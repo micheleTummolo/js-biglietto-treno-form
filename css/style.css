@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #B91550;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.card form {
+    width: 33%;
+}
+
+.card h4 {
+    color: #B91550;
+}
+
+.card input, .card select {
+    border: 1px solid #B91550;
+    text-align: center;
+    padding: .3rem;
+    border-radius: .5rem;
+    font-weight: 600;
+}
+
+.card button {
+    width: 6rem;
+}
+
+.my_card {
+    border-radius: 1rem;
+    box-shadow: 6px 7px 50px black;
+}
+
+.col_dx {
+    background-color: #808080;
+}
+
+.card_2 h4 {
+    color: black;
+}
+
+.border_grey {
+    border-top: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+}

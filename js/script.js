@@ -31,21 +31,27 @@ button.addEventListener ('click', function(){
     if (age_value == "under18"){
         prezzo_finito = tot_prezzo_km * 0.8;
         console.log (prezzo_finito + " Prezzo con 20% di sconto");
+        document.getElementById ('discount').innerHTML = "Scontato 20%";
     }
     else if (age_value == "over65"){
         prezzo_finito = tot_prezzo_km * 0.6;
         console.log (prezzo_finito + " Prezzo con 40% di sconto");
+        document.getElementById ('discount').innerHTML = "Scontato 40%";
     }
     else {
         prezzo_finito = tot_prezzo_km;
         console.log (prezzo_finito + " Prezzo no sconto");
+        document.getElementById ('discount').innerHTML = "Biglietto standard";
     }
     
     prezzo_arrotondato = prezzo_finito.toFixed(2);
+    console.log (prezzo_arrotondato + " Prezzo arrotondato")
+
+    document.getElementById ('passenger_name').innerHTML = name_value;
+    document.getElementById ('price').innerHTML = prezzo_arrotondato;
 });
 
 reset.addEventListener ('click', function(){
-    document.getElementById("my_form").reset();
+    document.getElementsByClassName("my_form").reset();
 })
 
-/* document.getElementById ('tot_viaggio').innerHTML = ("Prezzo finito: ") + prezzo_arrotondato; */
